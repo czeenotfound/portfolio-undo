@@ -7,11 +7,12 @@
 *{
   margin: 0;
   /* outline: blue solid 1px; */
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
   background-color: #01120e;
+  overflow: hidden;
 }
 
 .container{
@@ -48,7 +49,7 @@ header {
 
 .nav__item {
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .nav__item a{
@@ -107,7 +108,7 @@ header {
   width: 700px;
   height: 800px;
   object-fit: cover; 
-  object-position: 20% 0;
+  object-position: 11% 0;
 }
 
 .hero h1{
@@ -120,6 +121,40 @@ header {
   text-wrap: nowrap;
 }
 
+@keyframes slideUp {
+  from {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.heroText {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.heroImageContainer {
+  animation: slideUp 0.9s ease-out forwards;
+}
+
+.heroDescription {
+  animation: slideLeft 0.8s ease-out forwards;
+}
+
 .hero .heroButtons .btn{
   padding: 1em 2em;
   margin: 0.3em;
@@ -127,15 +162,16 @@ header {
   font-size: 1.3rem;
   font-weight: 700;
   text-decoration: none;
-  color: #022f23;
-  background-color: #d5e2ce;
+  color: #d5e2ce;
+  background-color: #022f23;
   border: none;
   transition: all 0.2s ease-in-out;
+  animation: slideUp 0.9s ease-out forwards;
 }
 
 .hero .heroButtons .btn:hover{
-  background-color: #23424A;
-  color: #d5e2ce;
+  background-color: #d5e2ce;
+  color: #23424A;
   padding: 0.9em 2em;
   border: 2px solid #d5e2ce;
 }
@@ -151,6 +187,122 @@ header {
 .hero .heroDescription{
   width: 550px;
   color: #d5e2ce;
+  text-wrap: wrap;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 1em;
+}
+
+
+/* ABOUT */
+
+/* HERO */
+.about {
+  padding: 20px 0;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('assets/gradienabout1.svg');
+  background-size: 3100px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aboutImage {
+  width: 670px;
+  height: 1300px;
+  object-fit: cover; 
+  object-position: 80% 0;
+}
+
+.about h1{
+  color: #d5e2ce;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.about .aboutProfile{
+  text-wrap: nowrap;
+}
+
+@keyframes slideUp {
+  from {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+
+.aboutText {
+  text-align: right;
+  width: 800px;
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.aboutText h1{
+  font-size: 7rem;
+}
+
+.aboutImageContainer {
+  animation: slideUp 0.9s ease-out forwards;
+}
+
+.aboutDescription {
+  font-weight: 600;
+  animation: slideLeft 0.8s ease-out forwards;
+}
+
+.about .aboutButtons .btn{
+  padding: 1em 2em;
+  margin: 0.3em;
+  border-radius: 5em;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #d5e2ce;
+  background-color: #022f23;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  animation: slideUp 0.9s ease-out forwards;
+}
+
+.about .aboutButtons .btn:hover{
+  background-color: #d5e2ce;
+  color: #23424A;
+  padding: 0.9em 2em;
+  border: 2px solid #d5e2ce;
+}
+
+.about hr{
+  height: 5px;
+  background-color: #d5e2ce;
+  border: none;
+  margin: 1em 0;
+}
+
+
+.about .aboutDescription{
+  width: 550px;
+  color: #d5e2ce;
+  text-align: right;
   text-wrap: wrap;
   font-size: 2rem;
   font-weight: 300;
