@@ -1,14 +1,19 @@
 import './App.css'
-import Navbar from './components/navbar'
-import Hero from './components/hero'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
 
 
 function App() {
   return (
     <>
       <div className='container'>
-        <Navbar />
-        <Hero/>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </>
   )
