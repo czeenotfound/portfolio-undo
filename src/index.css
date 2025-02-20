@@ -23,6 +23,9 @@ body{
 header {
   width: 100%;
   position: fixed;
+  top: 0;  /* Positions it at the very top */
+  left: 0; /* Aligns it to the left */
+  z-index: 1000; /* Ensures it stays above other elements */
   padding: 0.5rem;
   border-bottom: 1px solid #23424A;
   background-color: #01120e;
