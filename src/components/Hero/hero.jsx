@@ -1,7 +1,6 @@
 import React from 'react'
 import { Outlet, Link } from "react-router-dom";
 import logo from '../../assets/heroimage.svg'
-import herogradient from '../../assets/herogradient.svg'
 
 export default function Hero() {
   return (
