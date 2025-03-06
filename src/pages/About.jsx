@@ -1,5 +1,5 @@
-import HeroImage from '../assets/AboutPic.svg'
-import Navbar from '../components/navbar';
+import HeroImage from '../assets/aboutmeimage.svg'
+import Navbar from '../components/Navbar/navbar';
 
 export default function About() {
     return (

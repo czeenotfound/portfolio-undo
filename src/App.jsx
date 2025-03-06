@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -7,7 +7,7 @@ import About from './pages/About'
 function App() {
   return (
     <>
-      <div className='container'>
+      <div>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
