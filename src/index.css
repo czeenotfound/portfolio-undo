@@ -1,48 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import "tailwindcss";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-primary: #d5e2ce;
+  --color-secondary: #022f23;
 }
 
 *{
-  margin: 0;
   /* outline: blue solid 1px; */
   font-family: 'Poppins', sans-serif;
 }
 
 body{
   background-color: #01120e;
-  overflow: hidden;
+  overflow-x: hidden;
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #d5e2ce;
+  --sb-size: 3px;
 }
 
-.container{
-  height: 100vh;
+body::-webkit-scrollbar {
+  width: var(--sb-size)
 }
 
-
-header {
-  width: 100%;
-  position: fixed;
-  top: 0;  /* Positions it at the very top */
-  left: 0; /* Aligns it to the left */
-  z-index: 1000; /* Ensures it stays above other elements */
-  padding: 0.5rem;
-  border-bottom: 1px solid #23424A;
-  background-color: #01120e;
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 23px;
 }
 
-.nav {
-  width: 80%;
-  margin: 0 auto;
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 23px;
+  
 }
 
-.nav__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 1em 0;
-  font-size: .875em;
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
 }
 
 .navButton{
@@ -83,66 +80,65 @@ header {
   transition: width 0.3s ease;
 }
 
-.nav__item--main {
-  padding: 1em 2em;
-  background-color: whitesmoke;
-  color: #23424A;
-  font-weight: bold;
-  border-radius: 5em;
-  margin-right: 0px;
-}
-
 /* HERO */
 .hero {
   padding: 20px 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('assets/gradientshape.svg');
+  background-image: url('assets/herogradient.svg');
   background-size: 1300px;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.heroImageContainer {
+  animation: slideUp 0.9s ease-out forwards;
 }
 
 .heroImage {
   width: 700px;
   height: 800px;
-  object-fit: cover; 
-  object-position: 11% 0;
 }
 
-.hero h1{
+.heroContent {
+  width: 700px;
+  z-index: 2; /* Places content above the image in mobile view */
+}
+
+.hero h1 {
   color: #d5e2ce;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 600;
 }
 
-.hero .heroProfile{
+.hero .heroProfile {
   text-wrap: nowrap;
 }
 
 @keyframes slideUp {
   from {
-      transform: translateY(100px);
-      opacity: 0;
+    transform: translateY(100px);
+    opacity: 0;
   }
   to {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideLeft {
   from {
-      transform: translateX(-50px);
-      opacity: 0;
+    transform: translateX(-50px);
+    opacity: 0;
   }
   to {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -150,15 +146,11 @@ header {
   animation: slideUp 0.5s ease-out forwards;
 }
 
-.heroImageContainer {
-  animation: slideUp 0.9s ease-out forwards;
-}
-
 .heroDescription {
   animation: slideLeft 0.8s ease-out forwards;
 }
 
-.hero .heroButtons .btn{
+.hero .heroButtons .btn {
   padding: 1em 2em;
   margin: 0.3em;
   border-radius: 5em;
@@ -172,22 +164,21 @@ header {
   animation: slideUp 0.9s ease-out forwards;
 }
 
-.hero .heroButtons .btn:hover{
+.hero .heroButtons .btn:hover {
   background-color: #d5e2ce;
   color: #23424A;
   padding: 0.9em 2em;
   border: 2px solid #d5e2ce;
 }
 
-.hero hr{
+.hero hr {
   height: 5px;
   background-color: #d5e2ce;
   border: none;
   margin: 1em 0;
 }
 
-
-.hero .heroDescription{
+.hero .heroDescription {
   width: 550px;
   color: #d5e2ce;
   text-wrap: wrap;
@@ -196,71 +187,211 @@ header {
   margin-top: 1em;
 }
 
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1400px) {
+  .heroImage {
+    width: 600px;
+    height: 700px;
+  }
+  
+  .heroContent {
+    width: 600px;
+  }
+  
+  .hero .heroDescription {
+    width: 500px;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .heroImage {
+    width: 500px;
+    height: 600px;
+  }
+  
+  .heroContent {
+    width: 500px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero .heroDescription {
+    width: 450px;
+    font-size: 1.6rem;
+  }
+  
+  .hero .heroButtons .btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .heroImageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+  }
+
+  .nav__item a::after {
+    display: none;
+  }
+
+  .heroImage {
+    width: 900px;
+    height: 900px;
+    object-fit: cover;
+  
+    top: 60px;
+    border-radius: 50%;
+      -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  .heroContent {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 400px;
+  }
+  
+  .hero .heroDescription {
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 1em auto;
+  }
+  
+  .hero .heroButtons {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero .heroDescription {
+    font-size: 1.2rem;
+  }
+  
+  .nav__item a{
+    font-size: 1.5rem;
+  }
+  
+  .hero .heroButtons .btn {
+    padding: 0.8em 1.5em;
+    font-size: 1rem;
+    margin: 0.2em;
+  }
+  
+  .hero .heroButtons .btn:hover {
+    padding: 0.7em 1.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .heroProfile {
+    text-wrap: wrap;
+  }
+  
+  .hero .heroButtons {
+    flex-direction: column;
+  }
+  
+  .hero .heroButtons .btn {
+    width: 100%;
+    margin: 0.2em 0;
+  }
+}
+/* HERO */
 
 /* ABOUT */
 
-/* HERO */
 .about {
   padding: 20px 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('assets/gradienabout1.svg');
+  background-image: url('assets/aboutmegradient.svg');
   background-size: 3100px;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .aboutImage {
-  width: 670px;
-  height: 1300px;
+  width: 700px;
+  height: 800px;
   object-fit: cover; 
-  object-position: 80% 0;
 }
 
-.about h1{
+.about h1 {
   color: #d5e2ce;
   font-size: 5rem;
   font-weight: 600;
 }
 
-.about .aboutProfile{
+.about .aboutProfile {
   text-wrap: nowrap;
 }
 
 @keyframes slideUp {
   from {
-      transform: translateY(100px);
-      opacity: 0;
+    transform: translateY(100px);
+    opacity: 0;
   }
   to {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideLeft {
   from {
-      transform: translateX(-50px);
-      opacity: 0;
+    transform: translateX(-50px);
+    opacity: 0;
   }
   to {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
-
 
 .aboutText {
   text-align: right;
-  width: 800px;
+  width: 600px;
   animation: slideUp 0.5s ease-out forwards;
 }
 
-.aboutText h1{
+.aboutText h1 {
   font-size: 7rem;
 }
 
@@ -273,7 +404,7 @@ header {
   animation: slideLeft 0.8s ease-out forwards;
 }
 
-.about .aboutButtons .btn{
+.about .aboutButtons .btn {
   padding: 1em 2em;
   margin: 0.3em;
   border-radius: 5em;
@@ -287,22 +418,21 @@ header {
   animation: slideUp 0.9s ease-out forwards;
 }
 
-.about .aboutButtons .btn:hover{
+.about .aboutButtons .btn:hover {
   background-color: #d5e2ce;
   color: #23424A;
   padding: 0.9em 2em;
   border: 2px solid #d5e2ce;
 }
 
-.about hr{
+.about hr {
   height: 5px;
   background-color: #d5e2ce;
   border: none;
   margin: 1em 0;
 }
 
-
-.about .aboutDescription{
+.about .aboutDescription {
   width: 550px;
   color: #d5e2ce;
   text-align: right;
@@ -310,4 +440,115 @@ header {
   font-size: 2rem;
   font-weight: 300;
   margin-top: 1em;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1400px) {
+  .aboutImage {
+    width: 600px;
+    height: 700px;
+  }
+  
+  .aboutText {
+    width: 550px;
+  }
+  
+  .aboutText h1 {
+    font-size: 6.5rem;
+  }
+  
+  .about .aboutDescription {
+    width: 500px;
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutImage {
+    width: 500px;
+    height: 600px;
+  }
+  
+  .aboutText {
+    width: 500px;
+  }
+  
+  .aboutText h1 {
+    font-size: 6rem;
+  }
+  
+  .about h1 {
+    font-size: 5rem;
+  }
+  
+  .about .aboutDescription {
+    width: 450px;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  
+  .aboutTextContainer {
+    width: 100%;
+    margin-top: 500px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .aboutText {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 20px;
+    position: relative;
+  }
+  
+  /* Create a pseudo-element for the dark overlay */
+  .aboutText::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .aboutImageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+  }
+
+  .aboutImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Gradient mask for black-to-transparent effect */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 70%);
+}
+  
+  .aboutText h1 {
+    font-size: 6rem;
+  }
+  
+  .about .aboutDescription {
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 1em auto;
+    text-align: center;
+  }
 }
