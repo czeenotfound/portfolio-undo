@@ -142,7 +142,7 @@ const BlogPost = () => {
             {
                 id: 1,
                 title: "Day 1: Arrival in Manila",
-                date: "April 7, 2023",
+                date: "April 7, 2025",
                 summary: "Flight landed in Manila at 3pm after departing at 1pm, beginning our educational tour.",
                 content: getExpandedContent(1),
                 images: [
@@ -156,7 +156,7 @@ const BlogPost = () => {
             {
                 id: 2,
                 title: "Day 2: Exploring Subic and Olongapo",
-                date: "April 8, 2023",
+                date: "April 8, 2025",
                 summary: "A day of visiting Subic Bay Exhibition, SBMA departments, and duty-free shopping.",
                 content: getExpandedContent(2),
                 images: [
@@ -173,7 +173,7 @@ const BlogPost = () => {
             {
                 id: 3,
                 title: "Day 3: Cultural Heritage Exploration",
-                date: "April 9, 2023",
+                date: "April 9, 2025",
                 summary: "Visiting the National Museum and Museo ni Manuel Quezon to learn about Filipino heritage and history.",
                 content: getExpandedContent(3),
                 images: [
@@ -193,7 +193,7 @@ const BlogPost = () => {
             {
                 id: 4,
                 title: "Day 4: Economic and Technological Insights",
-                date: "April 10, 2023",
+                date: "April 10, 2025",
                 summary: "Tours of Bangko Sentral ng Pilipinas and Hytec Power Inc., with some shopping at Trinoma Mall.",
                 content: getExpandedContent(4),
                 images: [
@@ -208,7 +208,7 @@ const BlogPost = () => {
             {
                 id: 5,
                 title: "Day 5: Urban Transportation Systems",
-                date: "April 11, 2023",
+                date: "April 11, 2025",
                 summary: "Learning about traffic management at MMDA and rail transit operations at LRTA-Line 2.",
                 content: getExpandedContent(5),
                 images: [
@@ -229,7 +229,7 @@ const BlogPost = () => {
             {
                 id: 6,
                 title: "Day 6: Journey to Baguio and City Tour",
-                date: "April 12, 2023",
+                date: "April 12, 2025",
                 summary: "Early morning travel to Baguio, visiting the Strawberry Farm, Chinese Bell Church, PMA, and iconic city landmarks.",
                 content: getExpandedContent(6),
                 images: [
@@ -253,7 +253,7 @@ const BlogPost = () => {
             {
                 id: 7,
                 title: "Day 7: Baguio Souvenir Shopping and Return to Manila",
-                date: "April 13, 2023",
+                date: "April 13, 2025",
                 summary: "Free time to explore Baguio in the morning, afternoon return to Manila, and evening at BGC.",
                 content: getExpandedContent(7),
                 images: [
@@ -269,7 +269,7 @@ const BlogPost = () => {
             {
                 id: 8,
                 title: "Day 8: Homeward Bound to Zamboanga",
-                date: "April 14, 2023",
+                date: "April 14, 2025",
                 summary: "Early breakfast, morning flight, and arrival back home to Zamboanga.",
                 content: getExpandedContent(8),
                 images: [
