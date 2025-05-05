@@ -69,7 +69,7 @@ body {
 }
 
 *{
-  /* outline: gray solid 1px; */
+  outline: gray solid 1px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -316,8 +316,8 @@ body {
   }
   
   .heroContent {
-    width: 90%;
-    max-width: 600px;
+    width: 100vw;
+    max-width: 700px;
     padding: 20px;
     border-radius: 20px;
     margin-top: 400px;
@@ -329,15 +329,29 @@ body {
     margin: 1em auto;
   }
   
+  .hero .heroProfile {
+      font-size: 2.8rem;
+      text-wrap: wrap;
+  }
+
   .hero .heroButtons {
     display: flex;
     justify-content: center;
+  }
+
+  .hero .heroButtons a .custombtn{
+    font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .heroContent {
+    width: 100vw;
+    max-width: 400px;
   }
   
   .hero .heroDescription {
@@ -594,16 +608,27 @@ body {
     padding: 4rem 3rem;
   }
   .aboutText h1 {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   
   .about .aboutDescription {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 1em auto;
     text-align:justify;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .about h1 {
+    font-size: 2.5rem;
+  }
+
+  .about .aboutDescription {
+    font-size: 1rem;
+  }
+}
+
 
 section {
   padding: 4rem 0;
