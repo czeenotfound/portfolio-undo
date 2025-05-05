@@ -69,7 +69,7 @@ body {
 }
 
 *{
-  outline: gray solid 1px;
+  /* outline: gray solid 1px; */
   font-family: 'Poppins', sans-serif;
 }
 

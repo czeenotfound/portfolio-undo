@@ -59,7 +59,7 @@ function App() {
           </div>
         </footer>
         
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
       </div>
     </Router>
   )
