@@ -73,7 +73,7 @@ export default function Blog() {
         {
             id: 1,
             title: "Day 1: Arrival in Manila",
-            date: "April 7, 2023",
+            date: "April 7, 2025",
             summary: "Flight landed in Manila at 3pm after departing at 1pm, beginning our educational tour.",
             content: "Today marked the beginning of our educational journey with our arrival in Manila. Our flight departed at 1pm and we landed in the afternoon around 3pm. We were excited to start our educational tour and looking forward to all the experiences ahead.",
             images: [
@@ -87,7 +87,7 @@ export default function Blog() {
         {
             id: 2,
             title: "Day 2: Exploring Subic and Olongapo",
-            date: "April 8, 2023",
+            date: "April 8, 2025",
             summary: "A day of visiting Subic Bay Exhibition, SBMA departments, and duty-free shopping.",
             content: "Our second day was spent exploring Subic and Olongapo. We visited the Subic Bay Exhibition, SBMA Law Enforcement Department, and SBMA Seaport Department where we got to see the Vessel Traffic Management System in action. We also enjoyed some time at Subic Bay Park and finished the day with shopping at the Royal Duty-free shops.",
             images: [
@@ -104,7 +104,7 @@ export default function Blog() {
         {
             id: 3,
             title: "Day 3: Cultural Heritage Exploration",
-            date: "April 9, 2023",
+            date: "April 9, 2025",
             summary: "Visiting the National Museum and Museo ni Manuel Quezon to learn about Filipino heritage and history.",
             content: "Today was dedicated to exploring Filipino cultural heritage. We visited the National Museum where we admired various artifacts, artworks, and historical exhibits that showcase the rich history and culture of the Philippines. We also went to Museo ni Manuel Quezon, learning about the life and legacy of this important historical figure in Philippine history.",
             images: [
@@ -124,7 +124,7 @@ export default function Blog() {
         {
             id: 4,
             title: "Day 4: Economic and Technological Insights",
-            date: "April 10, 2023",
+            date: "April 10, 2025",
             summary: "Tours of Bangko Sentral ng Pilipinas and Hytec Power Inc., with some shopping at Trinoma Mall.",
             content: "An insightful day as we visited the Bangko Sentral ng Pilipinas to learn about currency production, though we couldn't take photos due to strict security policies. We also toured Hytec Power Inc. where we saw robotics and machinery in action. The day ended with some leisure time shopping at Trinoma Mall.",
             images: [
@@ -139,7 +139,7 @@ export default function Blog() {
         {
             id: 5,
             title: "Day 5: Urban Transportation Systems",
-            date: "April 11, 2023",
+            date: "April 11, 2025",
             summary: "Learning about traffic management at MMDA and rail transit operations at LRTA-Line 2.",
             content: "Today we focused on urban transportation systems. In the morning, we visited the MMDA Traffic Engineering Center to learn about traffic management in Metro Manila. In the afternoon, we went to the Light Rail Transit Authority-Line 2 where we got insights into the operations and management of one of Manila's major public transportation systems.",
             images: [
@@ -160,7 +160,7 @@ export default function Blog() {
         {
             id: 6,
             title: "Day 6: Journey to Baguio and City Tour",
-            date: "April 12, 2023",
+            date: "April 12, 2025",
             summary: "Early morning travel to Baguio, visiting the Strawberry Farm, Chinese Bell Church, PMA, and iconic city landmarks.",
             content: "An early start today with a 1:00am departure for Baguio, arriving at 6am. We visited the Strawberry Farm and Chinese Bell Church before heading to our hotel for breakfast. In the afternoon, we had the privilege of touring the Philippine Military Academy. After lunch back at the hotel, we continued our Baguio tour with visits to Mines View Park, Wright Park, Mansion House, and Burnham Park.",
             images: [
@@ -184,7 +184,7 @@ export default function Blog() {
         {
             id: 7,
             title: "Day 7: Baguio Souvenir Shopping and Return to Manila",
-            date: "April 13, 2023",
+            date: "April 13, 2025",
             summary: "Free time to explore Baguio in the morning, afternoon return to Manila, and evening at BGC.",
             content: "Our final day in Baguio started with free time in the morning to roam around and buy souvenirs. At noon, we began our journey back to Manila, arriving at 6pm. After dinner at 7pm, we spent the evening exploring Manila, particularly Bonifacio Global City (BGC).",
             images: [
@@ -200,7 +200,7 @@ export default function Blog() {
         {
             id: 8,
             title: "Day 8: Homeward Bound to Zamboanga",
-            date: "April 14, 2023",
+            date: "April 14, 2025",
             summary: "Early breakfast, morning flight, and arrival back home to Zamboanga.",
             content: "Our educational tour came to an end as we prepared to return home. We had an early breakfast at 5am before heading to the airport at 6am. After waiting for our boarding time, we flew back to Zamboanga, arriving at 12pm. It was an educational and memorable week filled with new experiences and knowledge.",
             images: [
