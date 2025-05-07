@@ -25,7 +25,7 @@ export default function Projects() {
         },
         {
             id: 3,
-            title: "CoffeTearia",
+            title: "CoffeeTearia",
             description: "An e-commerce platform dedicated to coffee supplies, designed to streamline product browsing, ordering, and inventory management for both customers and administrators.",
             image: project3,
             repoLink: "https://github.com/czeenotfound/CoffeeTeariaEcommerce",
