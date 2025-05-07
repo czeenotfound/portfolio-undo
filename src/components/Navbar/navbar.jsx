@@ -73,8 +73,7 @@ export default function Navbar() {
                 {/* Mobile Menu Button */}
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <a 
-                        href={cv} 
-                        download="Khalil_Undo_Resume.pdf" 
+                        href="/"
                         className="hidden md:block text-white bg-[#022f23] hover:bg-[#d5e2ce] hover:text-[#23424A] py-2 px-4 rounded-full transition-all duration-300 text-sm"
                     >
                         Download CV
@@ -141,8 +140,7 @@ export default function Navbar() {
                         )}
                         <li className="md:hidden mt-4">
                             <a 
-                                href={cv} 
-                                download="Khalil_Undo_Resume.pdf" 
+                                href="/" 
                                 className="inline-block py-2 px-4 bg-[#022f23] hover:bg-[#d5e2ce] hover:text-[#23424A] text-white rounded-full transition-all duration-300"
                             >
                                 Download CV

@@ -706,6 +706,15 @@ section.visible {
   }
 }
 
+/* Certificates */
+
+
+.certificate h1 {
+  color: #d5e2ce;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
 /* BLOG */
 
 .blog {

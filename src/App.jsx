@@ -5,6 +5,7 @@ import Hero from './components/Section/hero'
 import About from './components/Section/about'
 import Experience from './components/Section/experience'
 import Projects from './components/Section/projects'
+import Certifications from './components/Section/certifications'
 import Blog from './components/Section/blog'
 import Contact from './components/Section/contact'
 import AnimatedSection from './components/AnimatedSection'
@@ -38,6 +39,10 @@ function App() {
               
               <AnimatedSection id="projects" className="min-h-screen" delay={100}>
                 <Projects />
+              </AnimatedSection>
+              
+              <AnimatedSection id="certifications" className="min-h-screen" delay={100}>
+                <Certifications />
               </AnimatedSection>
               
               <AnimatedSection id="blog" className="min-h-screen" delay={100}>

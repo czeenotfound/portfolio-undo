@@ -14,7 +14,7 @@ export default function Hero() {
             </div>
             <div className='heroButtons'>
                 <a href="#about"><button className='btn custombtn'>About Me</button></a>
-                <a href="#projects"><button className='btn custombtn'>My Projects</button></a>
+                <a href="#certifications"><button className='btn custombtn'>My Certificates</button></a>
             </div>
             <br />
             <hr />
